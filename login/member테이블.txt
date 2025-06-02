@@ -1,0 +1,15 @@
+테이블 생성
+create table member (mb_no int(11) not null AUTO_INCREMENT,
+mb_id varchar(255)not null dafault'',
+mb_password varchar(225)not null default'',
+mb_name varchar(255)not null default'',
+mb_email varchar(255)not null default'',
+mb_job varchar(255)not null default'',
+mb_gender varchar(255)not null default'',
+mb_language varchar(255)not null default'',
+mb_datetime datetime not null default current_timestamp,
+PRIMARY KEY(mb_no),
+UNIQUE KEY (mb_id),
+KEY mb_datetime (mb_datetime));
+
+insert into member(mb_id, mb_password, mb_name, mb_email, mb_job, mb_gender, mb_language) values('master','1234','홍길동','a@naver.com','회사원','남','css') 

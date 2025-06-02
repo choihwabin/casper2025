@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/* 모달윈도우 */
+
+.modal * {
+  margin: 0px;
+  padding: 0px;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+}
+.modal .m_inner {
+  margin: 0 auto;
+  margin-top: 200px;
+  width: 450px;
+}
+.modal .m_inner img {
+  width: 100%;
+  display: block;
+}
+.modal .m_inner p {
+  margin-top: -1px;
+  background: #000;
+  font-size: 0.9rem;
+  line-height: 40px;
+  padding: 0px 4px;
+}
+.modal .m_inner p label {
+  color: #fff;
+}
+.modal .m_inner p #close_btn {
+  padding: 3px 6px;
+  float: right;
+  transform: translateY(6px);}

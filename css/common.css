@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/* common.css 2025/03/21 */
+/* 상단헤더서식, 하단푸터서식 공통 */
+
+/* root변수 설정 */
+:root{
+  --m_bg_color:#fff;
+  --m_font:'Noto Sans KR';
+  --f_size_base:12px;
+  --f_size1:14px;
+  --f_size2:16px;
+  --f_color1:#333;
+  --f_color01:#215499;
+  --f_color02:#042653;
+  --f_color03:#2986A7;
+  --f_color04:#ccc;
+  --f_color05:#ededed;
+}
+
+/* 헤더서식 */
+header{
+  position: absolute;
+  width: 100%; height: 70px;
+  z-index: 10000;
+}
+header > h1{
+  padding: 24px 0 0 2%;
+}
+
+/* 내비게이션 서식 */
+.gnb{
+  width: 600px;
+  margin: -21px auto 0 auto;
+}
+.gnb > ul{
+  display: flex;
+  justify-content: space-around;
+}
+.gnb > ul > li > a{
+  color: var(--m_bg_color);
+  font-size: 1.2rem;
+}
+.gnb > ul > li > a:hover{
+  text-decoration: underline;
+}
+
+/* 로그인, 알림 아이콘 서식 */
+header i.fas{
+  position: absolute;
+  color: var(--m_bg_color);
+  top: 22px;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.fa-user{right: 5%;}
+.fa-bell{right: 2%;}
+
+/* 화면이 세로스크롤 시 헤더에 적용되는 서식 */
+.h_act{
+  position: fixed;
+  top: 0px; left: 0px;
+  background: rgba(255,255,255,.8) !important;
+}
+.h_act .gnb li a, .h_act i {
+  color: var(--f_color1) !important;
+}
+
+
+/* 푸터서식 */
+footer{
+  background: var(--f_color1);
+  padding: 40px 0px;
+  height: 100px;
+}
+footer .f_inner{
+width: 1200px;
+margin: 0 auto;
+}
+footer h2{float: left; padding-top: 10px; width: 150px; height: 60px;}
+.f_lnb{float: left;}
+.f_lnb > ul{display: flex; padding-top: 15px;}
+.f_lnb a{color: #bababa; padding: 0px 20px; border-right: 1px solid var(--f_color04);}
+.f_lnb li:nth-child(2) a{color: var(--m_bg_color);}
+.f_lnb li:last-child a{border: none;}
+address{clear: left; line-height: 20px; text-transform: uppercase; padding-left: 170px; color: var(--m_bg_color);}
+address dt, address dd{display: inline-block;}

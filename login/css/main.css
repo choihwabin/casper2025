@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+/*main.css  2025-03-24 */
+
+/* root변수 설정 */
+:root{
+  --m_bg_color:#fff;
+  --m_font:'Noto Sans KR';
+  --f_size_base:12px;
+  --f_size1:14px;
+  --f_size2:16px;
+  --f_color1:#333;
+  --f_color01:#215499;
+  --f_color02:#042653;
+  --f_color03:#2986A7;
+  --f_color04:#ccc;
+  --f_color05:#ededed;
+}
+
+
+/* 원형 내비게이션 서식 */
+#m_nav{position: fixed; right: 30px; top: 50%; transform: translateY(-50%); z-index: 1000; width: 200px; height: 160px;}
+#m_nav ul{position: relative;}
+#m_nav ul li{width: 40px; height: 40px; border-radius: 40px; line-height: 40px; transition: 0.5s; background: rgba(0,0,0,.4); position: absolute; right: 0px; overflow: hidden;}
+
+#m_nav ul li:first-child{}
+#m_nav ul li:nth-child(2){top: 45px;}
+#m_nav ul li:nth-child(3){top: 92px;}
+#m_nav ul li:nth-child(4){top: 140px;}
+#m_nav ul li:last-child{top: 185px;}
+
+#m_nav span{display: inline-block; width: 40px; height: 40px; border-radius: 50%; background: rgb(0,179,255);color: var(--f_color05); text-align: center; font-weight: bold;}
+#m_nav li:hover{width: 200px;}
+#m_nav li:hover span{background: rgb(0, 102, 255);}
+#m_nav a{color: var(--f_color05); font-size: 16px; width: 160px; text-indent: 50px; display: inline-block; position: absolute;}
+
+
+main{overflow: hidden;}
+.text_center{text-align: center;}
+/* 1. 영상콘텐츠 서식 */
+#intro_m{height: 100vh; color: var(--m_bg_color); overflow: hidden;}
+#intro_m article{position: absolute; width: 100%; top: 26%; z-index: 100; text-align: center; font-size: var(--f_size2);}
+#intro_m p{line-height: 80px;}
+#intro_m article a{color: var(--m_bg_color); font-size: var(--f_size1); text-decoration: underline; padding: 5px 10px;}
+#intro_m article a:first-of-type{background: rgb(42,122,241);}
+
+/* 아래로 이동하기 버튼 */
+.next_page{display: inline-block; width: 30px; height: 30px; border-left: 2px solid var(--m_bg_color); border-bottom: 2px solid var(--m_bg_color); transform: rotate(-45deg); position: absolute; z-index: 1000; bottom: 40px; left: 50%;}
+
+/* section 마다 제목공통서식 */
+.sec_title{font-size: 60px; font-weight: bold; padding-bottom: 20px; text-align: center;}
+
+/* 각 section별 공통서식 */
+#top3, #buy{
+  margin: 150px auto;
+  width: 1200px; 
+}
+
+/* 2. top3 영역 서식 */
+#top3{text-align: center; overflow: hidden; padding-top:0px;}
+.sec_title2{font-size: 30px; font-weight: bold;}
+.p01{font-size: var(--f_size2); line-height: 50px;}
+
+/* slide서식 */
+.top3{position: relative; margin-top: 50px; padding: 20px 0px 50px 0px;}
+.top3 .swiper-wrapper{width: 100%; height: 100%;}
+#top3 .swiper-pagination-bullet{width:100px; border-radius: 0;}
+#top3 .swiper-pagination-bullet-active{background: #494b3e;}
+
+
+/* 자동차 옵션별 서식 */
+.rank{color: #327186; border: 1px solid #327186; padding: 6px 30px; border-radius: 20px; font-size: var(--f_size1);}
+.top3_title{font-size: 26px; font-weight: 500; padding-top: 30px; color: #333;}
+
+/* 자동차 사진 서식 */
+.top3 img{width: 400px; padding: 80px 0px;
+  /* 시간속성을 넣어줌( 역동적인 느낌) */
+  transition: 0.8s; transition-timing-function: cubic-bezier(0.1, 1.0); transform: scale(0.7);}
+
+/* 이미지 멈출때 크기 확장하기 */
+.top3 .swiper-slide-active img{transform: scale(1.2);}
+
+/* 디테일 서식 - 색상정보, 가격정보, 옵션 */
+.detail{display: flex; justify-content: center; padding-bottom: 60px;}
+.detail li{width: 190px; border-right: 1px solid #ccc; padding: 0px 20px; font-size: var(--f_size2); line-height: 20px; text-align: left;}
+.detail li:last-child{border: none; padding-top: 6px;}
+.price{font-size: 32px; font-weight: 500; color: 043e96;}
+
+/* 색상박스 */
+.outer_color, .inner_color{display: inline-block; width: 56px; height: 40px; text-indent: -9999px; margin-right: 10px; float: left;}
+.kaki{background: #494b3e;}
+.black{background: #000;}
+.white{background: #fff; border: 1px solid #ccc;}
+.orange{background: rgb(190,86,0);}
+
+/* 견적내기 서식, 버튼 공통서식 */
+.btn{border: 1px solid #333; background: var(--m_bg_color); padding: 8px 26px;}
+
+/* 3. 자동차 소개 서식 */
+#intro{height: 830px; overflow: hidden; position: relative;}
+#intro .sec_title2{ padding-bottom: 30px; position: absolute; z-index: 1000; width: 100%; top: 30px;}
+
+.intro_title_left, .intro_title_right{position: absolute; z-index: 100; font-size: 30px; font-weight: 500; line-height: 40px;}
+
+.intro_title_right{bottom: 200px; right: 150px; text-align: right;}
+.intro_title_left{left:130px; top: 200px;}
+#intro video{width: 100%; position: relative; top: -100px;}
+#intro .btn{position: absolute; z-index: 100; width: 150px; bottom: 60px; left: 50%; transform: translateX(-50%);}
+
+/* 4. 시승신청 서식 */
+#test_drive{padding-top: 150px; text-align: center;}
+#test_drive article{width: 430px; height: 280px; padding: 15px; margin-top: 50px; border: 1px solid var(--f_color04); display: inline-block; vertical-align: middle;}
+#test_drive article h3{font-size: 24px; line-height: 40px; padding-top: 20px; font-weight: bold;}
+#test_drive article p{font-size: var(--f_size1); line-height:20px; padding: 20px 0px; margin-bottom: 30px;}
+.test_drive .test_d_p{color: rgba(0,0,0,.8); font-weight: 400; transform: translateY(40px); font-size: 12px;}
+.test_drive_l .test_d_p{transform: translateY(52px);}
+.test_drive_r .test_d_p{ transform: translateY(64px);}
+.test_drive_l{margin-right: 30px;}
+.test_d_btn1{background: var(--f_color01); color: var(--m_bg_color); line-height: 30px; padding: 10px 60px;}
+.test_d_btn2{display: block; position: relative; color: var(--f_color01); font-weight: 450; top: 20px;}
+
+/* 5. 이벤트 프로모션 */
+#event_pro{width: 100%; background: var(--f_color05); text-align: center; padding: 80px 0px; margin-top: 200px;}
+#event_pro .p01{ padding-bottom: 50px;}
+.event{position: relative; overflow: hidden; width: 1200px; height: 350px; margin:0 auto;}
+.event .swiper-pagination-bullet{width: 15px; height: 15px; border-radius:7.5px; transition: 0.5s;}
+.event .swiper-pagination-bullet-active{background: #043e96; width: 100px; border-radius: 10px;}
+
+/* 6. 캐스퍼 구매안내 */
+#buy_info{text-align: center; padding: 120px 0px;}
+#buy_info > h3{font-size: 24px; padding: 40px 0px 20px 0px; font-weight: bold;}
+.t_color{color: var(--f_color03);}
+
+/* 구매안내 목록서식 */
+.buy_info_list{display: grid; grid-template-columns: repeat(3,33.333%); width: 1200px; margin: 0 auto;}
+.buy_info_list > li{padding-top: 50px;}
+.buy_info_list > li > img{width: 80px; padding: 40px 0px;}
+.buy_info_list h4{font-size: var(--f_size2); font-weight: bold;}
+.buy_info_list > li:last-child{grid-area: 3/1/4/4; width: 100%; height: 560px; margin-top: 100px;}
+.p03{font-size: var(--f_size1); line-height: 20px;}
+
+/* 7. 고객지원 */
+#cs{background: var(--f_color05); padding: 80px 0px; width: 100%;}
+#cs >h2{margin-bottom: 80px;}
+#cs article{padding-bottom: 24px;}
+#cs article, #cs ul, .ran_banner{margin: 15px auto; width: 1200px; background: var(--m_bg_color);}
+
+#cs article > h3{font-size: 18px; text-align: center; padding: 60px 0px 20px 0px; font-weight: bold;}
+.ars_left{border-right: 1px solid var(--f_color04);}
+.ars_left, .ars_right{width: 50%; padding: 20px 30px; box-sizing: border-box; float: left; display: flex; justify-content: space-around;}
+#cs div p{display: flex; flex-direction: column; text-align: center; line-height: 30px; align-items: center;}
+#cs p strong{font-size:var(--f_size2); font-weight: 500;}
+#cs p a{color: var(--f_color03);}
+.car_icon, .member_icon{background: url(../images/bg-support-ars.png); display: inline-block; height: 46px; text-indent: -9999px; margin-top: 30px;}
+.car_icon{width: 75px; transform: translateY(30px);}
+.member_icon{width: 60px; background-position: -90px 0px;}
+#cs dl{line-height: 24px;}
+#cs dl > dt{font-weight: bold;}
+#cs dl > dd{color: var(--f_color01);}
+
+/* float 속성 적용된 부모요소의 높이를 살리기 위함 */
+.clearfix::after{clear: both; display: block; content: '';}
+#cs ul{background: none;}
+
+
+/* 나의 문의내역 */
+.cs_etc > li:first-child a:nth-of-type(1){color: var(--f_color03);}
+/* 기타 cs */
+.cs_etc{margin:15px auto; display: flex; justify-content:space-around;}
+.cs_etc > li{background: var(--m_bg_color); height: 310px; width: 25%; padding: 0px 60px 10px 60px; position: relative; box-sizing: border-box; margin-right: 15px;}
+
+.cs_etc > li:last-child{margin-right:0;}
+.cs_etc > li > h3{font-size: var(--f_size1); text-align: left; padding: 60px 0px 20px 0px; font-weight: bold;}
+.cs_etc > li > p{text-align: left; line-height: 20px;}
+.cs_etc > li:last-child > a{color: var(--f_color03); font-weight: bold;}
+.cs_etc > li:last-child > p > a > img{padding: 18px 0px 10px 0px;}
+.cs_etc > li:last-child p:nth-of-type(2){text-align: center;}
+.btn01{color: var(--m_bg_color); display: inline-block; width: 140px; line-height: 34px; position: absolute; bottom: 30px; left: 50%; text-align: center; transform: translateX(-50%); background: var(--f_color02);}
+
+/* 8. 랜덤배너 */
+#banner{margin-top:50px; text-align: center;}
+
+
+
